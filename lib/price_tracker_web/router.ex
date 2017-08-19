@@ -16,7 +16,7 @@ defmodule PriceTrackerWeb.Router do
   scope "/", PriceTrackerWeb do
     pipe_through :browser # Use the default browser stack
 
-    get "/", PageController, :index
+    get "/", TrackedProductController, :index
     resources "/products", ProductController
     resources "/tracked_products", TrackedProductController
   end
