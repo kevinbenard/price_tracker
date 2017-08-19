@@ -1,0 +1,5 @@
+<h2>Edit Tracked product</h2>
+
+<%= render "form.html", Map.put(assigns, :action, tracked_product_path(@conn, :update, @tracked_product)) %>
+
+<span><%= link "Back", to: tracked_product_path(@conn, :index) %></span>

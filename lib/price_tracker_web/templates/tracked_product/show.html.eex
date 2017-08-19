@@ -1,0 +1,33 @@
+<h2>Show Tracked product</h2>
+
+<ul>
+
+  <li>
+    <strong>Product:</strong>
+    <%= @tracked_product.product %>
+  </li>
+
+  <li>
+    <strong>Date:</strong>
+    <%= @tracked_product.date %>
+  </li>
+
+  <li>
+    <strong>Amount:</strong>
+    <%= @tracked_product.amount %>
+  </li>
+
+  <li>
+    <strong>Unit:</strong>
+    <%= @tracked_product.unit %>
+  </li>
+
+  <li>
+    <strong>Price:</strong>
+    <%= @tracked_product.price %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: tracked_product_path(@conn, :edit, @tracked_product) %></span>
+<span><%= link "Back", to: tracked_product_path(@conn, :index) %></span>
