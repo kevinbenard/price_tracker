@@ -27,6 +27,11 @@
     <%= @tracked_product.price %>
   </li>
 
+  <li>
+    <strong>Price Per Unit:</strong>
+    <%= "#{@tracked_product.price_per_unit}/#{@tracked_product.unit}" %>
+  </li>
+
 </ul>
 
 <span><%= link "Edit", to: tracked_product_path(@conn, :edit, @tracked_product) %></span>

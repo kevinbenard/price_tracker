@@ -22,8 +22,8 @@
       <td><%= tracked_product.price %></td>
 
       <td class="text-right">
-        <span><%= link "Show", to: tracked_product_path(@conn, :show, tracked_product), class: "btn btn-default btn-xs" %></span>
-        <span><%= link "Edit", to: tracked_product_path(@conn, :edit, tracked_product), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Show", to: tracked_product_path(@conn, :show, tracked_product), class: "btn btn-primary btn-xs" %></span>
+        <span><%= link "Edit", to: tracked_product_path(@conn, :edit, tracked_product), class: "btn btn-success btn-xs" %></span>
         <span><%= link "Delete", to: tracked_product_path(@conn, :delete, tracked_product), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %></span>
       </td>
     </tr>

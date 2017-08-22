@@ -4,6 +4,8 @@ defmodule PriceTracker.Tracker.TrackedProduct do
   alias PriceTracker.Tracker.TrackedProduct
 
 
+  # TODO: Add location purchased
+  # TODO: Make price_per_unit not-null
   schema "tracked_products" do
     field :amount, :float
     field :date, :naive_datetime
