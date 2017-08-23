@@ -1,0 +1,28 @@
+<h2>Tracked Products Chart</h2>
+
+<style type="text/css">
+#chart {
+	width: 100%;
+	height: 100%;
+	font-size: 14px;
+	line-height: 1.2em;
+}
+</style>
+<script type="text/javascript">
+    chart_data = [
+    <%= for tracked_product <- @tracked_products do %>
+          <% formatted = NaiveDateTime.to_iso8601(tracked_product.date) %>
+          [ new Date('<%= formatted %>'), <%= tracked_product.price %>],
+    <% end %>
+  ];
+
+  $(function() {
+      $.plot("#chart", [chart_data], {
+          xaxis: { mode: "time" }
+      });
+  });
+</script>
+
+<div id="chart" style="width: 90%; height: 500px;"></div>
+
+<span><%= link "Back", to: tracked_product_path(@conn, :index) %></span>

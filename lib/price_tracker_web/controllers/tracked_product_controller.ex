@@ -9,6 +9,11 @@ defmodule PriceTrackerWeb.TrackedProductController do
     render(conn, "index.html", tracked_products: tracked_products)
   end
 
+  def chart(conn, _params) do
+    tracked_products = Tracker.list_tracked_products()
+    render(conn, "chart.html", tracked_products: tracked_products)
+  end
+
   def new(conn, _params) do
     changeset = Tracker.change_tracked_product(%TrackedProduct{})
     render(conn, "new.html", changeset: changeset)
