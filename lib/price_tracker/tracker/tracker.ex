@@ -114,7 +114,10 @@ defmodule PriceTracker.Tracker do
 
   """
   def list_tracked_products do
-    Repo.all(TrackedProduct)
+    Repo.all(
+        from tp in TrackedProduct, 
+        order_by: tp.date
+    )
   end
 
   @doc """
